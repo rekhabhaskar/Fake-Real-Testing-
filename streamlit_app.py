@@ -62,8 +62,8 @@ st.markdown(
 selected_text = st.text_input('')
 
 # Display the selected text
-st.markdown("<p class='stText'>Selected Text:</p>", unsafe_allow_html=True)
-st.write(selected_text)
+# st.markdown("<p class='stText'>Selected Text:</p>", unsafe_allow_html=True)
+# st.write(selected_text) 
 
 # Button to make predictions
 if st.button("Predict"):
