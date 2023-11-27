@@ -59,7 +59,7 @@ st.markdown(
 
 # Select a text from the loaded data
 # selected_text = st.selectbox("Select a text:", data['text'])
-selected_text = st.text_input('')
+# selected_text = st.text_input('')
 
 # Display the selected text
 # st.markdown("<p class='stText'>Selected Text:</p>", unsafe_allow_html=True)
