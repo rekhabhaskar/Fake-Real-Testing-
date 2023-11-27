@@ -59,8 +59,8 @@ st.markdown(
 
 # Select a text from the loaded data
 # selected_text = st.selectbox("Select a text:", data['text']) 
-st.write("""## Enter your News Article below: """) 
-selected_text = st.text_input('') 
+# st.write("""## Enter your News Article below: """) 
+selected_text = st.text_input('Enter your News Article below:', ' ' )      
 # selected_text = "The former reality show star had just one job to do and he couldn t do it."
 
 
