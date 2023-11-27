@@ -27,9 +27,9 @@ model = joblib.load('model.pkl')
 vectorizer = joblib.load('vectorizer.pkl') 
 
 
-def predict_news(input_text, vectorizer, model):
+def predict_news(input_text):
     input_tfidf = vectorizer.transform([input_text])
-    prediction = model.predict(input_tfidf)[0]
+    prediction = model.predict(input_tfidf)[0] 
     return prediction
 
 
@@ -58,7 +58,8 @@ st.markdown(
 )
 
 # Select a text from the loaded data
-# selected_text = st.selectbox("Select a text:", data['text'])
+# selected_text = st.selectbox("Select a text:", data['text']) 
+st.write("""## Enter your News Article below: """) 
 selected_text = st.text_input('') 
 # selected_text = "The former reality show star had just one job to do and he couldn t do it."
 
@@ -70,7 +71,7 @@ selected_text = st.text_input('')
 # Button to make predictions
 if st.button("Predict"):
     # Make a prediction
-    prediction = predict_news(selected_text, vectorizer, model)
+    prediction = predict_news(selected_text)
 
     # Display the prediction result
     st.markdown(f"<p class='stText'>Prediction: {'Real' if prediction == 1 else 'Fake'}</p>", unsafe_allow_html=True)
